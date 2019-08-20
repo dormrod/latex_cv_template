@@ -45,7 +45,6 @@
     urlcolor=blue,
 }
 \RequirePackage{fontawesome}
-\RequirePackage{marvosym}
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\cvtitle}[1]{\def\@cvtitle{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
@@ -58,8 +57,8 @@
 		{\Large\mdseries\upshape \@cvtitle}\\ \medskip
 		{\normalsize \@tagline} \\ \medskip
 		{\normalsize \faGithub \, \href{\@githublink}{\@githubname} \quad 
-		\large \Letter \normalsize \, \href{\@email}{\@email} \quad
-		\large \Mobilefone \normalsize \, \@mobile}
+		\normalsize \faMailReply \, \href{\@email}{\@email} \quad
+		\normalsize \faMobile \, \@mobile}
 	\end{center}
 }
 
@@ -77,6 +76,15 @@
 }
 \newcommand{\point}[1]{
 	{\phantom{\quad} $\bullet$ \normalsize #1 \\}
+}
+
+% ------ Publications ------
+\newcommand{\pub}[5]{
+	 {\normalsize \bfseries #1},
+	 {\normalsize #2},
+	 {\normalsize \textit{#3}},
+	 {\normalsize #4 \,}
+	 {\small \href{#5}{\faExternalLink}}\\
 }
 
 \endinput
