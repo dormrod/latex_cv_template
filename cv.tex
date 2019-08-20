@@ -3,7 +3,7 @@
 \name{Example Person}
 \cvtitle{Job Title}     
 \tagline{A short summary, quote, tagline about yourself.}
-\githubpage{www.github.com/example}{Example}      
+\githubpage{https://www.github.com}{Example}      
 \email{www.example.person@institution.com}     
 \mobile{07123123123}  
 %\email{david.ormrodmorley@chem.ox.ac.uk}    
@@ -14,10 +14,16 @@
 \maketitle
 
 \section{Some Section}
-
-\entry{Role}{Place}{Jan. 2000}{Jan. 2000}
+\entry{Role}{Place}{Jan. 2000}{}
 \point{Did this.}
 \point{And this.}
+\entry{Role with different date style}{Place}{01/00}{-06/01}
+\point{More things.}
+
+\section{Another Section}
+\entry{Role}{Place}{2000-2005}{}
+\point{Did this.}
+\point{Did many things which spanned a lot of space and are hard to explain succinctly in this shortened format, however I will try and see if I can fit it in.}
 
 \section{Publications}
 \pub{Some nice original science}{A. Name, B. Name \textit{et. al.}}{Journal of Something}{Date}{https://www.sciencemag.org}

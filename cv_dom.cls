@@ -12,8 +12,10 @@
 \ExecuteOptions{a4paper,11pt,final,}
 \ProcessOptions\relax
 
-
 % ------ Formatting ------
+
+% Encoding
+\usepackage[utf8]{inputenc}
 
 % Margins
 \RequirePackage[scale=0.8, top=2cm]{geometry}
@@ -26,6 +28,7 @@
 
 % Line spacing
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 \linespread{1.1}
 
 % Headers
@@ -34,7 +37,6 @@
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
 	\fancyhf{}}
-
 
 % ------ Title ------
 \RequirePackage{hyperref}
@@ -57,25 +59,28 @@
 		{\Large\mdseries\upshape \@cvtitle}\\ \medskip
 		{\normalsize \@tagline} \\ \medskip
 		{\normalsize \faGithub \, \href{\@githublink}{\@githubname} \quad 
-		\normalsize \faMailReply \, \href{\@email}{\@email} \quad
+		\normalsize \faMailReply \, \@email \quad
 		\normalsize \faMobile \, \@mobile}
 	\end{center}
 }
 
 % ------ Section ------
 \renewcommand{\section}[1]{
-  {\large\bfseries\upshape #1 \vspace{2mm} \hrule \bigskip}
+  {\medskip \large\bfseries\upshape #1 \vspace{2mm} \hrule \bigskip}
 }
 
 % ------ CV Entries ------
 \newcommand{\entry}[4]{
 	{\normalsize\bfseries\upshape #1}
-	{\normalsize \hfill #3}\\
+	{\normalsize \hfill #3\\}
 	{\normalsize #2}
-	{\normalsize \hfill #4}\\
+	{\normalsize \hfill #4}
 }
+\RequirePackage{changepage}
 \newcommand{\point}[1]{
-	{\phantom{\quad} $\bullet$ \normalsize #1 \\}
+	{\begin{adjustwidth}{0.4cm}{2cm}
+		$\bullet$ \normalsize #1
+	\end{adjustwidth}}	
 }
 
 % ------ Publications ------
@@ -84,7 +89,9 @@
 	 {\normalsize #2},
 	 {\normalsize \textit{#3}},
 	 {\normalsize #4 \,}
-	 {\small \href{#5}{\faExternalLink}}\\
+	 {\small \href{#5}{\faExternalLink}\\}
 }
+
+
 
 \endinput
