@@ -63,6 +63,20 @@
 	\end{center}
 }
 
+% ------ Section ------
+\renewcommand{\section}[1]{
+  {\large\bfseries\upshape #1 \vspace{2mm} \hrule \bigskip}
+}
 
+% ------ CV Entries ------
+\newcommand{\entry}[4]{
+	{\normalsize\bfseries\upshape #1}
+	{\normalsize \hfill #3}\\
+	{\normalsize #2}
+	{\normalsize \hfill #4}\\
+}
+\newcommand{\point}[1]{
+	{\phantom{\quad} $\bullet$ \normalsize #1 \\}
+}
 
 \endinput
